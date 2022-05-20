@@ -1,0 +1,10 @@
+.container_header {
+  position: absolute;
+  width: 80%;
+  /* background-color: aquamarine; */
+  height: 100px;
+  top: 0;
+  left: 15%;
+  display: flex;
+  justify-content: flex-end;
+}
