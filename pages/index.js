@@ -8,7 +8,7 @@ import Header from "../components/Header";
 export default function Home({ list_machine_1 }) {
   const [list_machine, setlist_machine] = useState([]);
   const get_machine = () => {
-    fetch("http://192.168.122.144:8000/api/create_machine/", {
+    fetch("https://rksmc4.deta.dev/get_machine/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -16,7 +16,7 @@ export default function Home({ list_machine_1 }) {
     }).then((response) => {
       if (response.status === 200) {
         return response.json().then((json_response) => {
-          setlist_machine(json_response["listado de maquinas"]);
+          setlist_machine(json_response["myresult"]);
           return false;
         });
       } else {
@@ -60,7 +60,7 @@ export default function Home({ list_machine_1 }) {
 
 export const getServerSideProps = async () => {
   const apiResponse = await fetch(
-    "http://192.168.122.144:8000/api/create_machine/"
+    "https://rksmc4.deta.dev/get_machine/"
   );
   const list_machine = await apiResponse.json();
 
