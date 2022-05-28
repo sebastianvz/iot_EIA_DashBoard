@@ -8,3 +8,30 @@
   display: flex;
   justify-content: flex-end;
 }
+
+/* background-color: aquamarine; */
+
+.continer_message {
+  width: 95%;
+  height: 60px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px;
+  margin-top: 5px;
+}
+
+.text_message {
+  font-size: 30px;
+  color: black;
+  margin-top: 20px;
+}
+
+.client_test {
+  font-size: 20px;
+  color: black;
+  margin-top: 20px;
+  text-decoration: underline;
+  margin-right: 10px;
+}
